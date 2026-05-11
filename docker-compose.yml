@@ -1,0 +1,18 @@
+services:
+  highway:
+    container_name: "highway"
+    image: ashishwayachal12/highway:v1
+    ports:
+      - "2222:80"
+    volumes:
+      - "highway-vol:/usr/share/nginx/html/"
+    networks:
+      - "highway-net"
+    
+volumes:
+  highway-vol:
+    name: "highway-vol"
+
+networks:
+  highway-net:
+    name: "highway-net"
